@@ -259,7 +259,7 @@
 		        	// Just lump the error message into the generic response div.
 		            if (index == -1){
 		                $('.mce-'+resp.result+'-response', $form).show();
-		                $('.mce-'+resp.result+'-response', $form).html(msg);      
+		                $('.mce-'+resp.result+'-response', $form).html(mc.translate(msg));      
 
 		            } else {
 		                var fieldName = $("input[name*='"+fnames[index]+"']").attr('name'); // Make sure this exists (they haven't deleted the fnames array lookup)
@@ -285,7 +285,7 @@
 			for ( t in messages ) {
 				var
 					i = msg.indexOf(t),
-					l = msg.length;
+					l = t.length;
 				if ( msg.indexOf(t) != -1 ) {
 					msg = messages[t] + msg.substr( i+l )
 				}
